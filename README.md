@@ -1,13 +1,21 @@
-# todo
+# Todo
 
 [✅] 01-routing
+
 [🚫] 02-data-loading
+
 [🚫] 03-dynamic-params
+
 [🚫] 04-nested-routing
+
 [🚫] 05-mutations
+
 [🚫] 06-progressive-enhancement
+
 [🚫] 07-multiple-forms
+
 [🚫] 08-errors
+
 [🚫] 09-env-vars
 
 10-admin-user

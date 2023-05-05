@@ -46,8 +46,14 @@ export default function Index() {
                   >
                     Log In
                   </Link>
+
                 )}
               </div>
+              <div className="mx-auto mt-16 max-w-7xl text-center">
+                  <Link to="/posts" className="flex items-center justify-center rounded-md bg-yellow-500 px-4 py-3 font-medium text-white hover:bg-yellow-600  ">
+                      Go To Posts
+                  </Link>
+              </div>              
               <a href="https://remix.run">
                 <img
                   src="https://user-images.githubusercontent.com/1500684/158298926-e45dafff-3544-4b69-96d6-d3bcc33fc76a.svg"
@@ -59,6 +65,11 @@ export default function Index() {
           </div>
         </div>
 
+        <div className="mx-auto mt-16 max-w-7xl text-center">
+          <Link to="/posts" className="text-xl text-blue-600 underline">
+            Blog Posts
+          </Link>
+        </div>
         {/* 💿 Add a link to /posts here */}
 
         <div className="mx-auto max-w-7xl py-2 px-4 sm:px-6 lg:px-8">

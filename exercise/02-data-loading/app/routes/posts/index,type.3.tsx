@@ -2,20 +2,25 @@ import {Link, useLoaderData} from '@remix-run/react'
 import {json} from '@remix-run/node'
 import {prisma } from '~/db.server'
 
-export async function getPosts() {
-  const posts = await prisma.post.findMany()
-  console.log({posts});  
-  return posts
-}
+const posts = [
+  {
+    slug: "my-first-post",
+    title: "My First Post",
+    date : new Date(),
+    fn : () => console.log("this works 1")
 
-export async function loader() {
-    const posts = await getPosts()
-    return posts
-}
+  },
+  {
+    slug: "90s-mixtape",
+    title: "A Mixtape I Made Just For You",
+    date : new Date(),
+    fn : () => console.log("this works2")
+  },
+]
 
 export default function Posts() {
-  const posts = useLoaderData<typeof loader>()
 
+  posts.at(0)?.fn()
   return (
     <main>
       <h1>Posts</h1>
@@ -27,7 +32,7 @@ export default function Posts() {
                       {v.title}
                   </Link>
                   <div className="">
-                      {v.updatedAt}                      
+                      {v.date.toISOString()}                      
                   </div>
               </li>
             )

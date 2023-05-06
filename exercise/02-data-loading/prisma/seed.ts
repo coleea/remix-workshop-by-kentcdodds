@@ -25,6 +25,11 @@ async function seed() {
 
   const posts = [
     {
+      slug : "added post",
+      title : "added post",
+      markdown : " i am post body",
+    },
+    {
       slug: "my-first-post",
       title: "My First Post",
       markdown: `

@@ -1,5 +1,8 @@
 import { prisma } from "~/db.server";
 
+export async function getPostItem(slug : string) {
+  return prisma.post.findUniqueOrThrow({where : {slug}})
+}
 export async function getPostListItems() {
   return prisma.post.findMany({ select: { slug: true, title: true } });
 }
